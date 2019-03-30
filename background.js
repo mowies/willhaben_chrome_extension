@@ -38,7 +38,7 @@ chrome.tabs.onActivated.addListener(
       function (tabs) {
         if (tabs[0]) {
           let url = tabs[0].url;
-          let product_url = url.match('willhaben\\.at([^?]*)')[0];
+          let product_url = url.match('willhaben\\.at([^?]*)')[1];
 
           chrome.storage.sync.get('urls', function (items) {
             let url_list = items['urls'];
@@ -59,5 +59,18 @@ chrome.tabs.onActivated.addListener(
         }
       }
     );
+
+    chrome.tabs.query(
+      {
+        active: true,
+        currentWindow: true,
+        url: 'https://*.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote*'
+      },
+      function(tabs) {
+        if (tabs[0]) {
+
+        }
+      }
+    )
   }
 );
