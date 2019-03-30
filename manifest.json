@@ -1,7 +1,7 @@
 {
-  "name": "Willhaben Extension - Getting started Example",
+  "name": "Willhaben Read Marker",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "A small extension that automatically marks already looked at rental appartments.",
   "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
   "options_page": "options.html",
   "background": {
