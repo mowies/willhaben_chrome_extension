@@ -1,8 +1,8 @@
 {
   "name": "Willhaben Read Marker",
-  "version": "1.0",
+  "version": "0.1",
   "description": "A small extension that automatically marks already looked at rental appartments.",
-  "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+  "permissions": ["activeTab", "storage", "tabs"],
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],
