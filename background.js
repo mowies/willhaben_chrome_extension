@@ -1,7 +1,3 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 'use strict';
 
 // check if an element exists in array using a comparer function
@@ -20,12 +16,6 @@ Array.prototype.pushIfNotExist = function(element, comparer) {
     this.push(element);
   }
 };
-
-chrome.runtime.onInstalled.addListener(function () {
-  chrome.storage.sync.set({willhaben_read_background_color: '#e0e0e0'}, () => {
-    console.log('Successfully set new background color in storage.');
-  });
-});
 
 chrome.tabs.onActivated.addListener(
   function (activeInfo) {
